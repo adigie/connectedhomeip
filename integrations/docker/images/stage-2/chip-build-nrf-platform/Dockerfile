@@ -39,6 +39,15 @@ RUN set -x \
     && west update -o=--depth=1 -n -f smart \
     && : # last line
 
+WORKDIR /opt
+RUN set -x \
+    && git clone https://gn.googlesource.com/gn \
+    && cd gn \
+    && git checkout feafd1012a32c05ec6095f69ddc3850afb621f3a \
+    && python build/gen.py \
+    && ninja -C out \
+    && : # last line
+
 # ==================================================
 # nRF Connect SDK final image
 # ==================================================
@@ -49,12 +58,14 @@ FROM ghcr.io/project-chip/chip-build:${VERSION}
 RUN set -x \
     && apt-get update \
     && apt-get install --no-install-recommends -fy device-tree-compiler \
+    && apt-get remove -fy generate-ninja \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/ \
     && : # last line
 
 COPY --from=build /opt/NordicSemiconductor/nRF5_tools/ /opt/NordicSemiconductor/nRF5_tools/
 COPY --from=build /opt/NordicSemiconductor/nrfconnect/ /opt/NordicSemiconductor/nrfconnect/
+COPY --from=build /opt/gn/out/gn /opt/gn/
 
 RUN set -x \
     # python3-yaml and python3-numpy packages conflict with nRF Python requirements
@@ -68,6 +79,7 @@ RUN set -x \
 ENV NRF5_TOOLS_ROOT=/opt/NordicSemiconductor/nRF5_tools
 ENV PATH=${NRF5_TOOLS_ROOT}/JLink_Linux_V794i_x86_64:${PATH}
 ENV PATH=${NRF5_TOOLS_ROOT}/nrf-command-line-tools/bin:${PATH}
+ENV PATH=/opt/gn:${PATH}
 ENV LD_LIBRARY_PATH=${NRF5_TOOLS_ROOT}/JLink_Linux_V794i_x86_64:${LD_LIBRARY_PATH}
 ENV LC_ALL=C.UTF-8
 ENV LANG=C.UTF-8
