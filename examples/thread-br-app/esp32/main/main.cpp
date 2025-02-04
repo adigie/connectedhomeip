@@ -35,7 +35,7 @@
 #include "support/CHIPMem.h"
 
 #include <app/clusters/thread-border-router-management-server/thread-border-router-management-server.h>
-#include <app/server/OnboardingCodesUtil.h>
+#include <setup_payload/OnboardingCodesUtil.h>
 #include <app/server/Server.h>
 #include <credentials/DeviceAttestationCredsProvider.h>
 #include <credentials/examples/DeviceAttestationCredsExample.h>

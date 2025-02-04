@@ -38,8 +38,8 @@
 
 #include <app-common/zap-generated/attributes/Accessors.h>
 #include <app/clusters/door-lock-server/door-lock-server.h>
+#include <setup_payload/OnboardingCodesUtil.h>
 #include <app/server/Dnssd.h>
-#include <app/server/OnboardingCodesUtil.h>
 #include <app/server/Server.h>
 
 #if CONFIG_DEVICE_TYPE_M5STACK

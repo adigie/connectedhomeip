@@ -26,7 +26,7 @@
 #include <app/server/Dnssd.h>
 #include <lib/dnssd/Advertiser.h>
 
-#include <app/server/OnboardingCodesUtil.h>
+#include <setup_payload/OnboardingCodesUtil.h>
 #include <app/util/attribute-storage.h>
 #include <data-model-providers/codegen/Instance.h>
 

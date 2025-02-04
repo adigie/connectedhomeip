@@ -38,8 +38,8 @@
 #include <lib/support/CHIPPlatformMemory.h>
 #include <platform/CHIPDeviceLayer.h>
 
+#include <setup_payload/OnboardingCodesUtil.h>
 #include <app/server/Dnssd.h>
-#include <app/server/OnboardingCodesUtil.h>
 #include <data-model-providers/codegen/Instance.h>
 
 #include <ti/drivers/apps/Button.h>

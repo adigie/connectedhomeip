@@ -36,8 +36,8 @@
 #include "StatusScreen.h"
 
 #include <app-common/zap-generated/attributes/Accessors.h>
+#include <setup_payload/OnboardingCodesUtil.h>
 #include <app/server/Dnssd.h>
-#include <app/server/OnboardingCodesUtil.h>
 #include <app/server/Server.h>
 
 #if CONFIG_DEVICE_TYPE_M5STACK

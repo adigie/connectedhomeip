@@ -20,7 +20,7 @@
 #include "esp_spi_flash.h"
 #include "esp_spiffs.h"
 #include "nvs_flash.h"
-#include <app/server/OnboardingCodesUtil.h>
+#include <setup_payload/OnboardingCodesUtil.h>
 #include <app/server/Server.h>
 #include <common/CHIPDeviceManager.h>
 #include <common/Esp32AppServer.h>

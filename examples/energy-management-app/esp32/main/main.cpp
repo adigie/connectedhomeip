@@ -37,8 +37,8 @@
 #include "shell_extension/launch.h"
 #include "shell_extension/openthread_cli_register.h"
 #include <EnergyManagementAppCmdLineOptions.h>
+#include <setup_payload/OnboardingCodesUtil.h>
 #include <app/server/Dnssd.h>
-#include <app/server/OnboardingCodesUtil.h>
 #include <app/util/endpoint-config-api.h>
 #include <credentials/DeviceAttestationCredsProvider.h>
 #include <credentials/examples/DeviceAttestationCredsExample.h>

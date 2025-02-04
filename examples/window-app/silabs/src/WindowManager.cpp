@@ -27,7 +27,7 @@
 #include <WindowManager.h>
 
 #include <app/clusters/window-covering-server/window-covering-server.h>
-#include <app/server/OnboardingCodesUtil.h>
+#include <setup_payload/OnboardingCodesUtil.h>
 #include <cmsis_os2.h>
 #include <lib/core/CHIPError.h>
 #include <lib/dnssd/Advertiser.h>

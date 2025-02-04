@@ -44,7 +44,7 @@
 #endif // ENABLE_CHIP_SHELL
 #endif // CHIP_CONFIG_ENABLE_ICD_SERVER
 
-#include <app/server/OnboardingCodesUtil.h>
+#include <setup_payload/OnboardingCodesUtil.h>
 #include <app/util/attribute-storage.h>
 #include <assert.h>
 #include <headers/ProvisionManager.h>

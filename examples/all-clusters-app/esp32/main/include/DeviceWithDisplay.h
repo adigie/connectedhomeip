@@ -32,8 +32,8 @@
 #include <vector>
 
 #include <app-common/zap-generated/attributes/Accessors.h>
+#include <setup_payload/OnboardingCodesUtil.h>
 #include <app/server/Dnssd.h>
-#include <app/server/OnboardingCodesUtil.h>
 #include <app/server/Server.h>
 
 #if CONFIG_HAVE_DISPLAY

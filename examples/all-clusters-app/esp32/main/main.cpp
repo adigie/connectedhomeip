@@ -33,7 +33,7 @@
 #include "nvs_flash.h"
 #include "platform/PlatformManager.h"
 #include "shell_extension/launch.h"
-#include <app/server/OnboardingCodesUtil.h>
+#include <setup_payload/OnboardingCodesUtil.h>
 #include <app/util/endpoint-config-api.h>
 #include <binding-handler.h>
 #include <common/CHIPDeviceManager.h>
