@@ -33,5 +33,5 @@ chip_system_config_use_open_thread_inet_endpoints = true
 chip_with_lwip = false
 nxp_enable_ot_cli = false
 
-cpp_standard = "gnu++17"
+cpp_standard = "c++17"
 is_debug = false

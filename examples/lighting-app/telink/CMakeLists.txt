@@ -21,7 +21,6 @@ get_filename_component(TELINK_COMMON ${CHIP_ROOT}/examples/platform/telink REALP
 get_filename_component(GEN_DIR ${CHIP_ROOT}/zzz_generated/ REALPATH)
 
 include(${TELINK_COMMON}/common.cmake)
-include(${CHIP_ROOT}/config/telink/app/enable-gnu-std.cmake)
 include(${CHIP_ROOT}/src/app/chip_data_model.cmake)
 
 project(chip-telink-lighting-example)

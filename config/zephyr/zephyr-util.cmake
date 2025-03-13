@@ -37,26 +37,6 @@ function(zephyr_get_compile_flags VAR LANG)
     set(${VAR} ${INCLUDES} ${SYSTEM_INCLUDES} ${DEFINES} ${FLAGS} ${${VAR}} PARENT_SCOPE)
 endfunction()
 
-#
-# Select gnu++<YY> standard matching C++ standard configured via Kconfig.
-#
-# Arguments:
-#   VAR  Name of list variable to be appended with the selected "-std=gnu++<YY>" flag
-#
-macro(zephyr_get_gnu_cpp_standard VAR)
-    if (CONFIG_STD_CPP11)
-        list(APPEND ${VAR} -std=gnu++11)
-    elseif (CONFIG_STD_CPP14)
-        list(APPEND ${VAR} -std=gnu++14)
-    elseif (CONFIG_STD_CPP17)
-        list(APPEND ${VAR} -std=gnu++17)
-    elseif (CONFIG_STD_CPP2A)
-        list(APPEND ${VAR} -std=gnu++20)
-    else()
-        message(FATAL_ERROR "Building with unsupported C++ standard")
-    endif()
-endmacro()
-
 function(zephyr_set_openthread_config_impl OT_DIR CONFIG_FILE)
     get_property(DEFINES DIRECTORY ${OT_DIR} PROPERTY COMPILE_DEFINITIONS)
     get_property(SUBDIRS DIRECTORY ${OT_DIR} PROPERTY SUBDIRECTORIES)

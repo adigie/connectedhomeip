@@ -40,10 +40,10 @@ declare_args() {
   exclude_unwind_tables = current_os != "android"
 
   # C standard level (value for -std flag).
-  c_standard = "gnu11"
+  c_standard = "c11"
 
   # C++ standard level (value for -std flag).
-  cpp_standard = "gnu++17"
+  cpp_standard = "c++17"
 
   # enable libfuzzer
   is_libfuzzer = false

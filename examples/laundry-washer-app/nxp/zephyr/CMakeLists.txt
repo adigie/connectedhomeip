@@ -38,7 +38,6 @@ target_compile_options(app PRIVATE -Werror PRIVATE -Wno-error=format)
 
 project(chip-nxp-all-clusters-app-example)
 
-include(${CHIP_ROOT}/config/nxp/app/enable-gnu-std.cmake)
 include(${CHIP_ROOT}/src/app/chip_data_model.cmake)
 
 target_include_directories(app

@@ -32,8 +32,6 @@ endif()
 
 project(chip-nrfconnect-shell-example)
 
-include(${CHIP_ROOT}/config/nrfconnect/app/enable-gnu-std.cmake)
-
 # -Wmaybe-uninitialized has too many false positives, including on std::optional
 # and chip::Optional.  Make it nonfatal.
 #

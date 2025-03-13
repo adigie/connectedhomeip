@@ -124,11 +124,11 @@ macro(matter_add_cxxflags flags)
     list(APPEND MATTER_CFLAGS_CC ${flags})
 endmacro()
 
-# Add GNU CPP standard flag to Matter CXX compiler flags
+# Add CPP standard flag to Matter CXX compiler flags
 # [Args]:
 #   std_version - standard version number e.g. 17 for C++17
-macro(matter_add_gnu_cpp_standard std_version)
-    list(APPEND MATTER_CFLAGS_CC -std=gnu++${std_version})
+macro(matter_add_cpp_standard std_version)
+    list(APPEND MATTER_CFLAGS_CC -std=c++${std_version})
 endmacro()
 
 # Get compiler flags from listed targets.

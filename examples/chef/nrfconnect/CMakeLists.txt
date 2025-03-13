@@ -42,7 +42,6 @@ get_filename_component(GEN_DIR ${CHEF}/out/${CONFIG_CHEF_DEVICE_TYPE}/zap-genera
 project(chip-nrfconnect-chef-example)
 
 include(${CHIP_ROOT}/config/nrfconnect/app/check-sysbuild-use.cmake)
-include(${CHIP_ROOT}/config/nrfconnect/app/enable-gnu-std.cmake)
 include(${CHIP_ROOT}/src/app/chip_data_model.cmake)
 
 # -Wmaybe-uninitialized has too many false positives, including on std::optional

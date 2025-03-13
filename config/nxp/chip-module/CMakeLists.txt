@@ -67,8 +67,6 @@ zephyr_get_compile_flags(ZEPHYR_CFLAGS_C C)
 matter_add_cflags("${ZEPHYR_CFLAGS_C}")
 zephyr_get_compile_flags(ZEPHYR_CFLAGS_CC CXX)
 matter_add_cxxflags("${ZEPHYR_CFLAGS_CC}")
-zephyr_get_gnu_cpp_standard(ZEPHYR_GNU_CPP_STD)
-matter_add_cxxflags(${ZEPHYR_GNU_CPP_STD})
 
 # Set up custom OpenThread configuration
 
