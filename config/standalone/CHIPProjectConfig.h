@@ -55,7 +55,7 @@
 //
 //    To build with this flag, pass 'treat_warnings_as_errors=false' to gn/ninja.
 //
-#define CHIP_CONFIG_SECURITY_TEST_MODE 0
+#define CHIP_CONFIG_SECURITY_TEST_MODE 1
 
 #ifndef CHIP_SYSTEM_CONFIG_PACKETBUFFER_POOL_SIZE
 #define CHIP_SYSTEM_CONFIG_PACKETBUFFER_POOL_SIZE 0
